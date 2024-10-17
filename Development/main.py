@@ -29,7 +29,7 @@ key = Fernet.generate_key()
  
 def registry_key_exists(path):
     try:
-        winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE, path)
+        winreg.OpenKey(winreg.HKEY_CURRENT_USER, path)
         return True
     except FileNotFoundError:
         print("first run")
